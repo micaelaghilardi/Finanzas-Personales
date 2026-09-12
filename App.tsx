@@ -1,9 +1,11 @@
+```tsx
 import { Routes, Route } from "react-router-dom";
 import { AuthProvider, useAuth } from "./AuthContext";
 import { AuthScreen } from "./AuthScreen";
 import { HouseholdOnboarding } from "./HouseholdOnboarding";
 import { Dashboard } from "./Dashboard";
 import { Placeholder } from "./Placeholder";
+import { AddTransaction } from "./AddTransaction";
 
 function Gate() {
   const { session, loading, household } = useAuth();
@@ -31,10 +33,7 @@ function Gate() {
         element={<Placeholder title="Presupuestos" />}
       />
       <Route path="/objetivos" element={<Placeholder title="Objetivos" />} />
-      <Route
-        path="/agregar"
-        element={<Placeholder title="Nuevo movimiento" />}
-      />
+      <Route path="/agregar" element={<AddTransaction />} />
     </Routes>
   );
 }
@@ -46,3 +45,4 @@ export default function App() {
     </AuthProvider>
   );
 }
+```
