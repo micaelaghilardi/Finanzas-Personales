@@ -1,4 +1,3 @@
-```tsx
 import { Routes, Route } from "react-router-dom";
 import { AuthProvider, useAuth } from "./AuthContext";
 import { AuthScreen } from "./AuthScreen";
@@ -45,4 +44,3 @@ export default function App() {
     </AuthProvider>
   );
 }
-```
